@@ -5,9 +5,9 @@ services:
     image: postgres:12
     hostname: testxdb_postgres
     environment:
-      POSTGRES_PASSWORD: testxdb
-      POSTGRES_USER: testxdb
-      POSTGRES_DB: testxdb
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: test_table
 
   testxdb:
     image: testxdb
@@ -18,7 +18,7 @@ services:
       SNOWFLAKE_PASSWORD: "${SNOWFLAKE_PASSWORD}"
       SNOWFLAKE_ACCOUNT: "${SNOWFLAKE_ACCOUNT}"
       SNOWFLAKE_DATABASE: "${SNOWFLAKE_DATABASE}"
-      BIGQUERY_PROJECT: "${BIGQUERY_PROJECT}"
+      BIGQUERY_PROJECT: "symbolic-bit-277217"
     build:
       context: .
       dockerfile: Dockerfile

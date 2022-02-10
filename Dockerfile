@@ -3,7 +3,7 @@ FROM python:3.7
 RUN apt-get update -y && \
 apt-get install -y vim && \
 pip3 install dbt SQLAlchemy && \
-apt-get install pgcli && \
+# apt-get install pgcli && \
 mkdir /app && \
 mkdir /dbt-xdb 
 
