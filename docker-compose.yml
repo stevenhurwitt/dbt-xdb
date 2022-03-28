@@ -21,7 +21,7 @@ services:
       BIGQUERY_PROJECT: "symbolic-bit-277217"
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dbt.Dockerfile
     volumes:
       - ./test_xdb/:/app
       - ./:/dbt-xdb
